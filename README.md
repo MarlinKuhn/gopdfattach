@@ -99,8 +99,11 @@ type AttachConfig struct {
     Version          string // defaults to "1.0" if factur-x, "2p0" if zugferd
     ConformanceLevel string // defaults to "EN 16931"
     Creator          string // defaults to "gopdfattach"
+    AFRelationship   AF     // defaults to AFAlternative (spec-compliant for Factur-X/ZUGFeRD)
 }
 ```
+
+The `AFRelationship` field uses the `AF` type with constants: `AFAlternative` (default), `AFData`, `AFSource`, and `AFSupplement`.
 
 ## Return Types
 
